@@ -1,5 +1,5 @@
-var setupElement = document.querySelector('.setup');
-setupElement.classList.remove('hidden');
+// var setupElement = document.querySelector('.setup');
+// setupElement.classList.remove('hidden');
 
 document.querySelector('.setup-similar').classList.remove('hidden');
 
