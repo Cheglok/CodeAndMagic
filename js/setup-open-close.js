@@ -1,3 +1,4 @@
+'use strict';
 (function () {
   var setup = document.querySelector('.setup');
   var setupOpen = document.querySelector('.setup-open');
@@ -12,6 +13,8 @@
   const closePopup = function () {
     setup.classList.add('hidden');
     document.removeEventListener('keydown', onPopupEscPress);
+    setup.style.top = '80px';
+    setup.style.left = '50%';
   };
 
   const openPopup = function () {
