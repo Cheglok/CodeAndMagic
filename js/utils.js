@@ -1,3 +1,4 @@
+'use strict';
 (function () {
   // Поиск наибольшего значения в массиве
   var getMaxFromArr = function (arr) {

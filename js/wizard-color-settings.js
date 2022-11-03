@@ -1,3 +1,4 @@
+'use strict';
 (function () {
   var availableCoatColors = [
     'rgb(101, 137, 164)',
