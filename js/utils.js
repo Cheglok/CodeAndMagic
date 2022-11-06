@@ -24,3 +24,5 @@
     getRandomFromArray: getRandomFromArray
   }
 })();
+
+//start watch lesson 6
