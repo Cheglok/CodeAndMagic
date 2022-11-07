@@ -25,4 +25,4 @@
   }
 })();
 
-//start watch lesson 6
+//watched lesson 6 wideo, start extra meterials
