@@ -37,4 +37,8 @@
     if (evt.key === 'Enter')
       closePopup()
   });
+
+  window.popup = {
+    closePopup: closePopup,
+  };
 })();
