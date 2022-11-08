@@ -24,3 +24,5 @@
     getRandomFromArray: getRandomFromArray
   }
 })();
+
+//watched lesson 6 wideo, start extra meterials
