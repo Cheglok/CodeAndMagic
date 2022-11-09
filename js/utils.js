@@ -14,15 +14,13 @@
     return maxElement;
   };
 
-  //Случайный элемент из массива
+  // Случайный элемент из массива
   var getRandomFromArray = function (arr) {
     return arr[Math.floor(Math.random() * arr.length)]
-  }
+  };
 
   window.utils = {
     getMaxFromArr: getMaxFromArr,
     getRandomFromArray: getRandomFromArray
-  }
+  };
 })();
-
-//watched lesson 6 wideo, start extra meterials

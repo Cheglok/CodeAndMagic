@@ -17,8 +17,8 @@
     });
     request.addEventListener('timeout', function () {
       onError('Запрос не успел выполниться в течение ' + request.timeout + 'мс');
-    })
-  }
+    });
+  };
 
   var download = function (onSuccess, onError) {
     var xhr = new XMLHttpRequest();
@@ -32,7 +32,6 @@
   };
 
   var upload = function (data, onSuccess, onError) {
-    console.log(data)
     var xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
 
@@ -45,5 +44,5 @@
   window.backend = {
     upload: upload,
     download: download,
-  }
+  };
 })();

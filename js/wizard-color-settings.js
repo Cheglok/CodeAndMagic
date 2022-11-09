@@ -41,7 +41,7 @@
       element.style.fill = color;
     }
     input.value = color;
-  }
+  };
 
   var changeEyesColor = function () {
     changeElementColor(wizardEyesElement, eyesColorInput, availableEyesColors);
@@ -62,7 +62,7 @@
         func();
       }
     });
-  }
+  };
 
   addListeners(wizardEyesElement, changeEyesColor);
   addListeners(wizardCoatElement, changeCoatColor);

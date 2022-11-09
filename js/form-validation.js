@@ -37,13 +37,13 @@
     divNode.style = 'z-index: 100; margin: 0 auto; text-align: center; background-color:' +
       ' red; position: absolute; left: 0; right: 0; font-size: 30px';
     divNode.textContent = msg;
-    document.body.insertAdjacentElement("afterbegin", divNode);
+    document.body.insertAdjacentElement('afterbegin', divNode);
   };
 
   form.addEventListener('submit', function (formEvt) {
     formEvt.preventDefault();
-    window.backend.upload(new FormData(form), function (response) {
+    window.backend.upload(new FormData(form), function () {
       window.popup.closePopup();
-    }, errorHandler)
+    }, errorHandler);
   });
 })();

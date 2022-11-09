@@ -6,7 +6,7 @@
     .querySelector('.setup-similar-item');
 
 
-// Отрисовка похожих волшебников
+  // Отрисовка похожих волшебников
   var renderWizard = function (wizard) {
     var wizardElement = similarWizardTemplate.cloneNode(true);
     wizardElement.querySelector('.setup-similar-label').textContent = wizard.name;
@@ -14,7 +14,7 @@
     wizardElement.querySelector('.wizard-eyes').style.fill = wizard.colorEyes;
 
     return wizardElement;
-  }
+  };
 
 
   var successHandler = function (data) {
@@ -25,20 +25,15 @@
     similarListElement.appendChild(fragment);
 
     document.querySelector('.setup-similar').classList.remove('hidden');
-  }
+  };
 
   var errorHandler = function (msg) {
     var divNode = document.createElement('div');
     divNode.style = 'z-index: 100; margin: 0 auto; text-align: center; background-color:' +
       ' red; position: absolute; left: 0; right: 0; font-size: 30px';
     divNode.textContent = msg;
-    document.body.insertAdjacentElement("afterbegin", divNode);
-  }
+    document.body.insertAdjacentElement('afterbegin', divNode);
+  };
 
   window.backend.download(successHandler, errorHandler);
 })();
-
-
-
-
-
