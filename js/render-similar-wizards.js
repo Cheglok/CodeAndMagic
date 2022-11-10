@@ -16,14 +16,17 @@
     return wizardElement;
   };
 
-
-  var successHandler = function (data) {
+  var renderSimilarWizards = function (data) {
     var fragment = document.createDocumentFragment();
     for (var i = 0; i < 4; i++) {
       fragment.appendChild(renderWizard(data[i]));
     }
     similarListElement.appendChild(fragment);
+  };
 
+
+  var successHandler = function (data) {
+    renderSimilarWizards(data);
     document.querySelector('.setup-similar').classList.remove('hidden');
   };
 
@@ -36,4 +39,6 @@
   };
 
   window.backend.download(successHandler, errorHandler);
+
+  window.renderSimilarWizards = renderSimilarWizards;
 })();
