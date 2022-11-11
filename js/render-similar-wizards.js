@@ -5,6 +5,15 @@
     .content
     .querySelector('.setup-similar-item');
 
+  var sortData = function (data, coatColor, eyesColor) {
+    var sort = data.sort(function (left, right) {
+      return ((left.coatColor === coatColor) * 2 + (left.eyesColor === eyesColor) * 1)
+        - ((right.coatColor === coatColor) * 2 + (right.eyesColor === eyesColor) * 1);
+    });
+    debugger
+    return sort;
+  };
+
 
   // Отрисовка похожих волшебников
   var renderWizard = function (wizard) {
@@ -26,7 +35,7 @@
 
 
   var successHandler = function (data) {
-    renderSimilarWizards(data);
+    renderSimilarWizards(sortData(data, 'rgb(101, 137, 164)', 'black'));
     document.querySelector('.setup-similar').classList.remove('hidden');
   };
 
