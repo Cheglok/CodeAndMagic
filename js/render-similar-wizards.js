@@ -10,7 +10,6 @@
       return ((left.coatColor === coatColor) * 2 + (left.eyesColor === eyesColor) * 1)
         - ((right.coatColor === coatColor) * 2 + (right.eyesColor === eyesColor) * 1);
     });
-    debugger
     return sort;
   };
 
@@ -51,3 +50,4 @@
 
   window.renderSimilarWizards = renderSimilarWizards;
 })();
+
