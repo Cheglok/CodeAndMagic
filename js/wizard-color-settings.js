@@ -23,6 +23,11 @@
     '#e6e848',
   ];
 
+  window.colors = {
+    eyesColor: 'black',
+    coatColor: 'rgb(101, 137, 164)',
+  };
+
   var setup = document.querySelector('.setup');
   var wizardEyesElement = setup.querySelector('.wizard-eyes');
   var wizardCoatElement = setup.querySelector('.wizard-coat');
@@ -31,7 +36,6 @@
   var coatColorInput = setup.querySelector('[name="coat-color"]');
   var eyesColorInput = setup.querySelector('[name="eyes-color"]');
   var fireballColorInput = setup.querySelector('[name="fireball-color"]');
-
 
   var changeElementColor = function (element, input, colors) {
     var color = window.utils.getRandomFromArray(colors);
@@ -43,12 +47,22 @@
     input.value = color;
   };
 
+  var onColorChange = window.utils.debounce(window.renderSimilarWizards);
+
   var changeEyesColor = function () {
-    changeElementColor(wizardEyesElement, eyesColorInput, availableEyesColors);
+    var newColor = window.utils.getRandomFromArray(availableEyesColors);
+    eyesColorInput.value = newColor;
+    wizardEyesElement.style.fill = newColor;
+    window.colors.eyesColor = newColor;
+    onColorChange();
   };
 
   var changeCoatColor = function () {
-    changeElementColor(wizardCoatElement, coatColorInput, availableCoatColors);
+    var newColor = window.utils.getRandomFromArray(availableCoatColors);
+    wizardCoatElement.style.fill = newColor;
+    coatColorInput.value = newColor;
+    window.colors.coatColor = newColor;
+    onColorChange();
   };
 
   var changeFireballColor = function () {
